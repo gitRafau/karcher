@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Karcher{% block title %}{% endblock %}</title>
+        <meta name="description" content="The HTML5 Herald">
+        <meta name="author" content="Malnet sp.z.o.o">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/pushy.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/slick.css') }}">
+            <!-- custom style slider -->
+            <link rel="stylesheet" href="{{ asset('css/slick-theme.css') }}"/>
+            <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
+            <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;subset=latin-ext" rel="stylesheet">
+
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="header__top">
+                    <div class="header__contact">
+                        <img src="assets/images/icon-phone.png">
+                        <div class="text">
+                            {+48} 12 637 66 35
+                        </div>
+                    </div>
+                    <div class="header__contact">	
+                        <img src="assets/images/icon-email.png">
+                        <div class="text">
+                            info@karchercenter-profi.pl
+                        </div>					
+                    </div>
+                    <input class="header__search" placeholder="Szukaj"><span class="search__icon"></span>
+                    <div class="header__hamper">
+                        <img src="assets/images/icon-hamper.png">
+                        <div class="text">
+                            Koszyk (0)
+                        </div>
+                    </div>
+                    <div class="header__login">
+                        <img src="assets/images/icon-register.png">
+                        <a class="text">
+                            Zarejestruj 
+                        </a>
+                    </div>
+                    <div class="header__login">
+                        <img src="assets/images/icon-login.png">
+                        <a class="text">
+                            Zaloguj się
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="header__center">
+                <div class="container">
+                    <div class="logo__box">
+                        <img class="wow fadeIn" data-wow-delay="0.2s" src="assets/images/logo.png">
+                    </div>
+                    <div class="logo__second">
+                        <img src="assets/images/logo2.png">
+                        <img src="assets/images/logo3.png">
+                    </div>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <div class="container">
+                    <!-- category menu -->
+                    <nav class="category__menu">
+                        <ul>
+                            <!-- first drop -->
+                            <li class="dropdown"><a href="">KATEGORIE <div class="category__icon wow zoomIn" data-wow-delay="0.2s"> <span></span><span></span><span></span></div></a>
+                                <ul class="sub__menu">
+                                    <!-- second drop -->
+                                    <li class="dropleft"><a href="">test2</a>
+                                        <ul class="sub__menu2">
+                                            <!-- third drop -->
+                                            <li class="dropleft2"><a href="">test3</a>
+                                                <ul class="sub__menu3">
+                                                    <li><a href="">test3</a></li>
+                                                    <li><a href="">test3</a></li>
+                                                    <li><a href="">test3</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropleft2"><a href="">test3</a>
+                                                <ul class="sub__menu3">
+                                                    <li><a href="">test3</a></li>
+                                                    <li><a href="">test3</a></li>
+                                                    <li><a href="">test3</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                                <ul class="sub__menu">
+                                    <!-- second drop -->
+                                    <li class="dropleft"><a href="">test2</a>
+                                        <ul class="sub__menu2">
+                                            <!-- third drop -->
+                                            <li class="dropleft2"><a href="">test3</a>
+                                                <ul class="sub__menu3">
+                                                    <li><a href="">test3</a></li>
+                                                    <li><a href="">test3</a></li>
+                                                    <li><a href="">test3</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropleft2"><a href="">test3</a>
+                                                <ul class="sub__menu3">
+                                                    <li><a href="">test3</a></li>
+                                                    <li><a href="">test3</a></li>
+                                                    <li><a href="">test3</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>	
+
+                    <!-- menu -->
+                    <nav class="main__menu">
+                        <ul>
+                            <li><a href="">START</a></li>
+                            <li><a href="">O NAS</a></li>
+                            <li><a href="">PROMOCJE</a></li>
+                            <li><a href="">NOWOŚCI</a></li>
+                            <li><a href="">WYPOŻYCZALNIA</a></li>
+                            <li><a href="">KATALOGI</a></li>
+                            <li><a href="">SERWIS</a></li>
+                            <li><a href="">REGULAMIN</a></li>
+                            <li><a href="">KONTAKT</a></li>
+                        </ul>
+                        <div class="menu__icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- slider -->
+        <div class="container">
+            <div class="subpage__banner" style="background-url('assets/images/banner1.jpg">
+
+            </div>
+        </div>
+        <!-- subpage -->
+        {% block body %}
+            <div class="container">
+                <div class="site__navigation">
+                    <img src="assets/images/sitenav.png"> <a href="">KÄRCHER</a>   <span>></span>   <a href="">Dom i ogród</a>
+                </div>
+                <div class="container -white">
+                    <div class="title__subpage">
+                        Dom i ogród	
+                    </div>
+
+                    <div class="products__wrapper">
+                        <a class="product__box">
+                            <img src="assets/images/prod.jpg">
+                            <div class="title">Urządzenia wysokociśnieniowe</div>
+                        </a>
+                        <a class="product__box">
+                            <img src="assets/images/prod.jpg">
+                            <div class="title">Urządzenia wysokociśnieniowe</div>
+                        </a>
+                        <a class="product__box">
+                            <img src="assets/images/prod.jpg">
+                            <div class="title">Urządzenia wysokociśnieniowe</div>
+                        </a>
+                        <a class="product__box">
+                            <img src="assets/images/prod.jpg">
+                            <div class="title">Urządzenia wysokociśnieniowe</div>
+                        </a>
+                        <a class="product__box">
+                            <img src="assets/images/prod.jpg">
+                            <div class="title">Urządzenia wysokociśnieniowe</div>
+                        </a>
+                        <a class="product__box">
+                            <img src="assets/images/prod.jpg">
+                            <div class="title">Urządzenia wysokociśnieniowe</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {% endblock %}
+
+        <!-- footer -->
+        <div class="about__wrapper">
+            <div class="container">
+                <div class="newsletter">
+                    <div class="title">NASZ NEWSLETTER</div>
+                    <div class="newsletter__box">
+                        <input class="newsletter__input" type="email" name="newsletter" placeholder="Twój adres email">
+                        <button class="btn__newsletter">ZAPISZ</button>
+                    </div>
+                    <div class="newsletter__info">Pobierz najnowsze aktualizacje o nowych produktach i zbliżających się promocji</div>
+                </div>
+            </div>
+        </div>
+        <div class="menu__info">
+            <div class="container">
+                <div class="menu__footer">
+                    <ul class="menu__list">
+                        <li><a href="">Link</a></li>
+                        <li><a href="">Link</a></li>
+                        <li><a href="">Link</a></li>
+                        <li><a href="">Link</a></li>
+                        <li><a href="">Link</a></li>
+                    </ul>
+                    <ul class="menu__list">
+                        <li><a href="">Link</a></li>
+                        <li><a href="">Link</a></li>
+                        <li><a href="">Link</a></li>
+                        <li><a href="">Link</a></li>
+                        <li><a href="">Link</a></li>
+                    </ul>
+                    <ul class="menu__list">
+                        <li><a href="">Link</a></li>
+                        <li><a href="">Link</a></li>
+                        <li><a href="">Link</a></li>
+                        <li><a href="">Link</a></li>
+                        <li><a href="">Link</a></li>
+                    </ul>
+                    <ul class="menu__list">
+                        <li><a href="">Link</a></li>
+                        <li><a href="">Link</a></li>
+                        <li><a href="">Link</a></li>
+                        <li><a href="">Link</a></li>
+                        <li><a href="">Link</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="menu__wrapper">
+            <nav class="main__menu -footer">
+                <ul>
+                    <li><a href="">START</a></li>
+                    <li><a href="">O NAS</a></li>
+                    <li><a href="">PROMOCJE</a></li>
+                    <li><a href="">NOWOŚCI</a></li>
+                    <li><a href="">WYPOŻYCZALNIA</a></li>
+                    <li><a href="">KATALOGI</a></li>
+                    <li><a href="">SERWIS</a></li>
+                    <li><a href="">REGULAMIN</a></li>
+                    <li><a href="">KONTAKT</a></li>
+                </ul>
+                <div class="menu__icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>	
+            <div class="copyrights">
+                <div class="container cop">
+                    <p>Wszystkie prawa zastrzeżone © 2017 <a href="">nazwadomeny</a></p>
+                    <p>Projekt i realizacja: <a href="">mal.net.pl</a></p>
+                </div>
+            </div>	
+        </div>
+
+        {% block javascripts %}
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="{{asset('js/frontend.js')}}"></script>
+            <script src="{{asset('js/slick.js')}}"></script>
+            <script src="{{asset('js.slick.min.js')}}"></script>
+            <script src="{{asset('js/wow.js')}}"></script>
+            <script>
+                new WOW().init();
+            </script>
+        {% endblock %}
+    </body>
+</html>
