@@ -11,30 +11,13 @@
             </div>
 
             <div class="products__wrapper">
+                {% for prod in produkty %}
                 <a class="product__box">
                     <img src="{{asset('images/prod.jpg')}}">
-                    <div class="title">Urządzenia wysokociśnieniowe</div>
+                    <div class="title">{{prod.getTitle}}</div>
+                    <div>{{prod.getDescript}}</div>
                 </a>
-                <a class="product__box">
-                    <img src="{{asset('images/prod.jpg')}}">
-                    <div class="title">Urządzenia wysokociśnieniowe</div>
-                </a>
-                <a class="product__box">
-                    <img src="{{asset('images/prod.jpg')}}">
-                    <div class="title">Urządzenia wysokociśnieniowe</div>
-                </a>
-                <a class="product__box">
-                    <img src="{{asset('images/prod.jpg')}}">
-                    <div class="title">Urządzenia wysokociśnieniowe</div>
-                </a>
-                <a class="product__box">
-                    <img src="{{asset('images/prod.jpg')}}">
-                    <div class="title">Urządzenia wysokociśnieniowe</div>
-                </a>
-                <a class="product__box">
-                    <img src="{{asset('images/prod.jpg')}}">
-                    <div class="title">Urządzenia wysokociśnieniowe</div>
-                </a>
+               {% endfor %}
             </div>
         </div>
     </div>

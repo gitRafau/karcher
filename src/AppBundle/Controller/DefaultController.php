@@ -25,4 +25,13 @@ class DefaultController extends Controller
         
         return $this->render('cms/login.html.twig');
     }
+    
+    /**
+     * @Route("/cms/panel", name="cms_panel")
+     */
+    public function panelCMSAction(Request $request)
+    {
+        
+        return $this->render('cms/panel.html.twig');
+    }
 }
