@@ -24,32 +24,32 @@
             <div class="container">
                 <div class="header__top">
                     <div class="header__contact">
-                        <img src="assets/images/icon-phone.png">
+                        <img src="{{asset('images/icon-phone.png')}}">
                         <div class="text">
                             {+48} 12 637 66 35
                         </div>
                     </div>
                     <div class="header__contact">	
-                        <img src="assets/images/icon-email.png">
+                        <img src="{{asset('images/icon-email.png')}}">
                         <div class="text">
                             info@karchercenter-profi.pl
                         </div>					
                     </div>
                     <input class="header__search" placeholder="Szukaj"><span class="search__icon"></span>
                     <div class="header__hamper">
-                        <img src="assets/images/icon-hamper.png">
+                        <img src="{{asset('images/icon-hamper.png')}}">
                         <div class="text">
                             Koszyk (0)
                         </div>
                     </div>
                     <div class="header__login">
-                        <img src="assets/images/icon-register.png">
+                        <img src="{{asset('images/icon-register.png')}}">
                         <a class="text">
                             Zarejestruj 
                         </a>
                     </div>
                     <div class="header__login">
-                        <img src="assets/images/icon-login.png">
+                        <img src="{{asset('images/icon-login.png')}}">
                         <a class="text">
                             Zaloguj się
                         </a>
@@ -59,11 +59,11 @@
             <div class="header__center">
                 <div class="container">
                     <div class="logo__box">
-                        <img class="wow fadeIn" data-wow-delay="0.2s" src="assets/images/logo.png">
+                        <img class="wow fadeIn" data-wow-delay="0.2s" src="{{asset('images/logo.png')}}">
                     </div>
                     <div class="logo__second">
-                        <img src="assets/images/logo2.png">
-                        <img src="assets/images/logo3.png">
+                        <img src="{{asset('images/logo2.png')}}">
+                        <img src="{{asset('images/logo3.png')}}">
                     </div>
                 </div>
             </div>
@@ -147,7 +147,7 @@
         </header>
         <!-- slider -->
         <div class="container">
-            <div class="subpage__banner" style="background-url('assets/images/banner1.jpg">
+            <div class="subpage__banner" style="background: url({{asset('images/banner1.jpg')}})">
 
             </div>
         </div>
@@ -155,7 +155,7 @@
         {% block body %}
             <div class="container">
                 <div class="site__navigation">
-                    <img src="assets/images/sitenav.png"> <a href="">KÄRCHER</a>   <span>></span>   <a href="">Dom i ogród</a>
+                    <img src="{{asset('images/sitenav.png')}}"> <a href="">KÄRCHER</a>   <span>></span>   <a href="">Dom i ogród</a>
                 </div>
                 <div class="container -white">
                     <div class="title__subpage">
@@ -164,27 +164,27 @@
 
                     <div class="products__wrapper">
                         <a class="product__box">
-                            <img src="assets/images/prod.jpg">
+                            <img src="{{asset('images/prod.jpg')}}">
                             <div class="title">Urządzenia wysokociśnieniowe</div>
                         </a>
                         <a class="product__box">
-                            <img src="assets/images/prod.jpg">
+                            <img src="{{asset('images/prod.jpg')}}">
                             <div class="title">Urządzenia wysokociśnieniowe</div>
                         </a>
                         <a class="product__box">
-                            <img src="assets/images/prod.jpg">
+                            <img src="{{asset('images/prod.jpg')}}">
                             <div class="title">Urządzenia wysokociśnieniowe</div>
                         </a>
                         <a class="product__box">
-                            <img src="assets/images/prod.jpg">
+                            <img src="{{asset('images/prod.jpg')}}">
                             <div class="title">Urządzenia wysokociśnieniowe</div>
                         </a>
                         <a class="product__box">
-                            <img src="assets/images/prod.jpg">
+                            <img src="{{asset('images/prod.jpg')}}">
                             <div class="title">Urządzenia wysokociśnieniowe</div>
                         </a>
                         <a class="product__box">
-                            <img src="assets/images/prod.jpg">
+                            <img src="{{asset('images/prod.jpg')}}">
                             <div class="title">Urządzenia wysokociśnieniowe</div>
                         </a>
                     </div>
@@ -276,5 +276,5 @@
                 new WOW().init();
             </script>
         {% endblock %}
-    </body>
+    </body>git st
 </html>
