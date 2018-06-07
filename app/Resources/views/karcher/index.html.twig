@@ -12,7 +12,7 @@
 
             <div class="products__wrapper">
                 {% for prod in produkty %}
-                <a class="product__box">
+                <a class="product__box" href="{{path('show_product', {'id': prod.getId()})}}">
                     <img src="{{asset('images/prod.jpg')}}">
                     <div class="title">{{prod.getTitle}}</div>
                     <div>{{prod.getDescript}}</div>

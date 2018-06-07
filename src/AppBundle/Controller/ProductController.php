@@ -18,7 +18,7 @@ use AppBundle\Entity\Product;
 class ProductController extends Controller {
 
     /**
-     * @Route("/cms/panel/product/create", name="product_create") 
+     * @Route("/cms/product/create", name="product_create") 
      */
     public function createProductAction(Request $request) {
 
@@ -70,7 +70,7 @@ class ProductController extends Controller {
     }
 
     /**
-     * @Route("cms/panel/product/update/{id}", name="update_product")
+     * @Route("cms/product/update/{id}", name="update_product")
      */
     public function updateProductAction(Request $request, $id) {
 
@@ -118,7 +118,7 @@ class ProductController extends Controller {
     }
 
     /**
-     * @Route("/cms/panel/produkt/delete/{id}", name="delete_product") 
+     * @Route("/cms/produkt/delete/{id}", name="delete_product") 
      */
     public function deleteProductAction($id, Request $request) {
 

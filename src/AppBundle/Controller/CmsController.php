@@ -8,26 +8,10 @@ use Symfony\Component\HttpFoundation\Request;
 
 use AppBundle\Entity\Product;
 
-class DefaultController extends Controller {
+class CmsController extends Controller {   
 
     /**
-     * @Route("/", name="homepage")
-     */
-    public function indexAction(Request $request) {
-        // replace this example code with whatever you need
-        return $this->render('karcher/index.html.twig');
-    }
-
-    /**
-     * @Route("/cms", name="cms_login")
-     */
-    public function indexCMSAction(Request $request) {
-
-        return $this->render('cms/login.html.twig');
-    }
-
-    /**
-     * @Route("/cms/panel", name="cms_panel")
+     * @Route("/cms", name="cms_panel")
      */
     public function panelCMSAction(Request $request) {
        
@@ -37,5 +21,7 @@ class DefaultController extends Controller {
                     'produkty' => $produkty
         ]);
     }
+
+    
 
 }
