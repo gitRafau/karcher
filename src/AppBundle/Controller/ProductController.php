@@ -6,6 +6,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use AppBundle\Entity\Product;
 
@@ -24,9 +25,15 @@ class ProductController extends Controller {
         $product = new Product();
 
         $form = $this->createFormBuilder($product)
-                ->add('title', TextType::class)
-                ->add('descript', TextType::class)
-                ->add('serve', SubmitType::class, array('label' => 'Create Product'))
+                ->add('title', TextType::class, array(
+                    'attr' => array('class' => 'form-control'),
+                ))
+                ->add('descript', TextareaType::class, array(
+                    'attr' => array('class' => 'form-control'),
+                ))
+                ->add('Dodaj Produkt', SubmitType::class, array(
+                    'attr' => array('class' => 'btn btn-info btn-block'),
+                ))
                 ->getForm();
 
         $form->handleRequest($request);

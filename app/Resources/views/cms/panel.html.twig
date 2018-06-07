@@ -191,7 +191,7 @@
             </div>
             <div class="col-md-2">
                 <div class="dropdown create">
-                    <a href="#">
+                    <a href="{{path('product_create')}}">
                         <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                             + Dodaj produkt                     
                         </button> 
@@ -204,6 +204,7 @@
 
 
 <section id="main">
+    {%block content %}
     <div class="container">
         <div class="row">
             <div class="col-md-3">
@@ -308,6 +309,7 @@
             </div>
         </div>
     </div>
+    {% endblock %}
 </section>
 
 <footer id="footer">
