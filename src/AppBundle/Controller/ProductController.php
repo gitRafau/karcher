@@ -33,9 +33,10 @@ class ProductController extends Controller {
                     'attr' => array('class' => 'form-control')
                 ))
                 ->add('brochure', FileType::class, array(
-                    'label' => 'Plik (PDF)'))
+                    'label' => 'Załącz plik (PDF)'
+                    ))
                 ->add('image', FileType::class, array(
-                    'label' => 'Zdjęcie Produktu'))
+                    'label' => 'Załącz zdjęcie'))
                 ->add('Dodaj Produkt', SubmitType::class, array(
                     'attr' => array('class' => 'btn btn-info btn-block', 'style' => 'margin-top: 20px;'),
                 ))

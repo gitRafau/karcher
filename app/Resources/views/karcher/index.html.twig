@@ -13,7 +13,7 @@
             <div class="products__wrapper">
                 {% for prod in produkty %}
                 <a class="product__box" href="{{path('show_product', {'id': prod.getId()})}}">
-                    <img src="{{asset('uploads/images/' ~ prod.getImage())}}">
+                    <img src="{{asset('uploads/images/' ~ prod.getImage()) | imagine_filter('my_thumb')}}">
                     <div class="title">{{prod.getTitle}}</div>
                     
                 </a>

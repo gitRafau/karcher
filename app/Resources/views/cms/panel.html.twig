@@ -220,32 +220,33 @@
                             <div id="sortable1" class="connectedSortable">
                                 {% for prod in produkty %}
                                     <div class="panel panel-default">
-                                    <li style="padding: 5px 10px;" class="ui-state-default">
-                                        {{prod.title}} 
-                                        | 
-                                        {{prod.descript}} 
-                                        |
-                                        <a href="{{ asset('uploads/brochures/' ~ prod.brochure) }}">
-                                            <img src="{{asset('images/pdf_icon.png')}}" height="30px">
-                                        </a>
-                                        |<a href="{{path('show_product', {'id':prod.getId()})}}">
-                                            <button class="btn btn-info">Pokaż Produkt</button>
-                                        </a>
-                                        <a href="{{path('update_product', {'id':prod.getId()})}}">
-                                            <button class="btn btn-warning">Edytuj Produkt</button>
-                                        </a>
 
-                                        <a href="{{path('delete_product', {'id':prod.getId()})}}">
-                                            <button class="btn btn-danger">Usuń Produkt</button>
-                                        </a>
-                                    </li>
+                                        <li style="padding: 5px 10px;" class="ui-state-default">
+                                            {{prod.title}} 
+                                            | 
+                                            {{prod.descript}} 
+                                            |
+                                            <a href="{{ asset('uploads/brochures/' ~ prod.brochure) }}">
+                                                <img src="{{asset('images/pdf_icon.png')}}" height="30px">
+                                            </a>
+                                            |<a href="{{path('show_product', {'id':prod.getId()})}}">
+                                                <button class="btn btn-info">Pokaż Produkt</button>
+                                            </a>
+                                            <a href="{{path('update_product', {'id':prod.getId()})}}">
+                                                <button class="btn btn-warning">Edytuj Produkt</button>
+                                            </a>
+
+                                            <a href="{{path('delete_product', {'id':prod.getId()})}}">
+                                                <button class="btn btn-danger">Usuń Produkt</button>
+                                            </a>
+                                        </li>
                                     </div>
                                 {% endfor %}
 
                             </div>
 
 
-                               
+
                         </div>
                     </div>
                 </div>
