@@ -34,6 +34,8 @@ class ProductController extends Controller {
                 ))
                 ->add('brochure', FileType::class, array(
                     'label' => 'Plik (PDF)'))
+                ->add('image', FileType::class, array(
+                    'label' => 'Zdjęcie Produktu'))
                 ->add('Dodaj Produkt', SubmitType::class, array(
                     'attr' => array('class' => 'btn btn-info btn-block', 'style' => 'margin-top: 20px;'),
                 ))
@@ -44,26 +46,36 @@ class ProductController extends Controller {
         if ($form->isSubmitted() && $form->isValid()) {
             $product = $form->getData();
 
-            $file = $product->getBrochure();
+            $file = $product->getBrochure();            
+            $fileImage = $product->getImage();            
+           
+            
             $fileName = $this->generateUniqueFileName() . '.' . $file->guessExtension();
-
+            $fileImageName = $this->generateUniqueFileName() . '.' . $fileImage->guessExtension();
+           
             $file->move(
                     $this->getParameter('brochures_directory'), $fileName
+            );            
+            
+            $fileImage->move(
+                    $this->getParameter('images_directory'), $fileImageName
             );
 
             $product->setBrochure($fileName);
-
+            $product->setImage($fileImageName);
 
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($product);
             $entityManager->flush();
-
+            
             return $this->redirectToRoute('cms_panel');
         }
 
         return $this->render('cms/create.html.twig', [
                     'form' => $form->createView()
         ]);
+        
+       
     }
 
     /**
@@ -74,6 +86,7 @@ class ProductController extends Controller {
         // uniqid(), which is based on timestamps
         return md5(uniqid());
     }
+    
 
     /**
      * @Route("/", name="homepage") 

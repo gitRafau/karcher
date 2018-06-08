@@ -97,7 +97,6 @@ class Product
     
     /**
      * @ORM\Column(type="string")
-     *
      * @Assert\NotBlank(message="Uwaga, wrzucany plik musi być w formacie PDF!")
      * @Assert\File(mimeTypes={ "application/pdf" })
      */
@@ -111,6 +110,25 @@ class Product
     public function setBrochure($brochure)
     {
         $this->brochure = $brochure;
+
+        return $this;
+    }
+    
+    /**    
+     * @var string     
+     * @Assert\Image()
+     * @ORM\Column(name="image", type="string", length=255)  
+     */
+    private $image;
+
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    public function setImage($image)
+    {
+        $this->image = $image;
 
         return $this;
     }

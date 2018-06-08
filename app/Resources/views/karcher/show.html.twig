@@ -17,46 +17,52 @@
                          <div>{{prod.getDescript}}</div>
                      </a>
                  {% endfor %}#}
+                 {% for prod in product %}
                 <div class="container -white">
                     <div class="main__product">
                         <div class="left">
                             <div class="productShow">
                                 <a data-lightbox="image-1"  class="product__show" href="assets/images/productshow.jpg">
-                                    <img src="{{asset('images/productshow.jpg')}}">
+                                    <img src="{{asset('uploads/images/' ~ prod.getImage())}}">
                                     <div class="productShow__content"><span><img class="lope__products" src="assets/images/lopeproduct.png"></span><span>Powiększ zdjęcie</span></div>
                                 </a>
                                 <a data-lightbox="image-1"  class="product__show" href="assets/images/productshow.jpg">
-                                    <img src="{{asset('images/productshow.jpg')}}">
+                                    <img src="{{asset('uploads/images/' ~ prod.getImage())}}">
                                     <div class="productShow__content"><span><img class="lope__products" src="assets/images/lopeproduct.png"></span><span>Powiększ zdjęcie</span></div>
                                 </a>
 
                             </div>
                         </div>
                         <div class="right">
-                            <div class="main__productTitle">BP 7 Home & Garden eco!ogic</div>
-                            <div class="main__productTitle">- Pompa ogrodowa Kärcher</div>
-                            <div class="main__productText -custom">Producent: Kärcher</div>
-                            <div class="main__productText">Kod produktu: 1.645-356.0</div>
-                            <div class="main__productText -price">CENA: <span>278,99 zł</span></div>
-                            <a class="main__productBtn">ZAPYTAJ O PRODUKT</a>
-                            <div class="main__productionB">
-                                <div class="main__productionQ">ILOŚĆ</div>
-                                <input class="main__productioninput" placeholder="1">
-                                <button><img src="{{asset('images/icon-hamper.png')}}"><span> do koszyka</span></button>
-                            </div>
-                            <div class="main__productContent">
-                                Automatyczna pompa Home & Garden BP 7 doskonale sprawdza się zarówno w nawadnianiu ogrodów jak i zasilaniu domowych pralek czy toalet wodą z alternatywnych źródeł. Pompa z linii eco!ogic.
+                           
+                                <div class="main__productTitle">{{prod.getTitle()}}</div>
+                                <div class="main__productText -custom">Producent: Kärcher</div>
+
+                                <div class="main__productText -price">CENA: <span>278,99 zł</span></div>
+                                <a class="main__productBtn">ZAPYTAJ O PRODUKT</a>
+                                <div class="main__productionB">
+                                    <div class="main__productionQ">ILOŚĆ</div>
+                                    <input class="main__productioninput" placeholder="1">
+                                    <button><img src="{{asset('images/icon-hamper.png')}}"><span> do koszyka</span></button>
+                                </div>
+                                <div class="main__productContent">
+                                    <p>Broszury</p>
+                                    <a href="{{ asset('uploads/brochures/' ~ prod.brochure) }}">
+                                        <img src="{{asset('images/pdf_icon.png')}}" height="30px">
+                                    </a>
+                                </div>
+
                             </div>
                         </div>
-                    </div>
 
-                    <div class="contentTitle">
-                        <span>Opis</span>
-                        <div class="arrowShow" style="background:url('assets/images/arrowshow.png');"></div>
-                    </div>
-                    <div class="contentText">
-                        Pompa może zasilać wodą użytkową Twój dom dostarczając ją m.in. do pralki czy WC. Jednocześnie może też służyć do nawadniania ogrodu. Pompa może pobierać wodę z beczek, cystern i zbiorników na deszczówkę, źródeł naturalnych czy studni. Dzięki temu możemy oszczędzać drogą wodę wodociągową dbając nie tylko o zasobność portfela, ale także o środowisko. Pompa Home & Garden jest wysoce energooszczędna i cicha. Włącza się automatycznie w chwili wystąpienia zapotrzebowania na wodę, a następnie samodzielnie się wyłącza. Dwuwyjściowy adapter pozwala na podłączenie i zasilanie obu wyjść równocześnie. W wyposażoniu filtr wstępny, zawór zwrotny, zwijanie przewodu zasilającego oraz zabezpieczenie przed pracą na sucho. W razie awarii, kontrolki pokazują, w którym miejscu znajduje się przyczyna usterki – po stronie ssącej czy po stronie ciśnieniowej. Wielostopniowa pompa gwarantuje oszczędność energii i obniżoną głośność pracy. Dodatkowo pompa eco!logic nie pobiera energii (0 Wat) w trybie czuwania (stand by).
-                    </div>
+                        <div class="contentTitle">
+                            <span>Opis</span>
+                            <div class="arrowShow" style="background:url('assets/images/arrowshow.png');"></div>
+                        </div>
+                        <div class="contentText">
+                            {{prod.getDescript()}}
+                        </div>
+                    {% endfor %}
                     <div class="content -title">Wyposażenie standardowe</div>
                     <div class="contentText -custom">
                         <div class="content__list">
