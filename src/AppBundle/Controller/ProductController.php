@@ -34,7 +34,7 @@ class ProductController extends Controller {
                 ))
                 ->add('brochure', FileType::class, array(
                     'label' => 'Załącz plik (PDF)'
-                    ))
+                ))
                 ->add('image', FileType::class, array(
                     'label' => 'Załącz zdjęcie'))
                 ->add('Dodaj Produkt', SubmitType::class, array(
@@ -47,17 +47,17 @@ class ProductController extends Controller {
         if ($form->isSubmitted() && $form->isValid()) {
             $product = $form->getData();
 
-            $file = $product->getBrochure();            
-            $fileImage = $product->getImage();            
-           
-            
+            $file = $product->getBrochure();
+            $fileImage = $product->getImage();
+
+
             $fileName = $this->generateUniqueFileName() . '.' . $file->guessExtension();
             $fileImageName = $this->generateUniqueFileName() . '.' . $fileImage->guessExtension();
-           
+
             $file->move(
                     $this->getParameter('brochures_directory'), $fileName
-            );            
-            
+            );
+
             $fileImage->move(
                     $this->getParameter('images_directory'), $fileImageName
             );
@@ -68,15 +68,13 @@ class ProductController extends Controller {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($product);
             $entityManager->flush();
-            
+
             return $this->redirectToRoute('cms_panel');
         }
 
         return $this->render('cms/create.html.twig', [
                     'form' => $form->createView()
         ]);
-        
-       
     }
 
     /**
@@ -87,7 +85,6 @@ class ProductController extends Controller {
         // uniqid(), which is based on timestamps
         return md5(uniqid());
     }
-    
 
     /**
      * @Route("/", name="homepage") 
@@ -115,7 +112,7 @@ class ProductController extends Controller {
 
         if (!$product) {
             throw $this->createNotFoundException(
-                    'Nie ma takie produktu numerze: ' . $id
+                    'Nie ma takiego produktu numerze: ' . $id
             );
         }
 
@@ -126,6 +123,7 @@ class ProductController extends Controller {
                 ->add('descript', CKEditorType::class, array(
                     'attr' => array('class' => 'form-control')
                 ))
+               
                 ->add('Edytuj Produkt', SubmitType::class, array(
                     'attr' => array('class' => 'btn btn-warning btn-block', 'style' => 'margin-top: 20px;'),
                 ))
