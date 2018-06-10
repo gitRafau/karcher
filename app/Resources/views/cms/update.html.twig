@@ -206,15 +206,17 @@
 <section id="main">
 
     <div class="container">
-        
+
         Edytuj swój Produkt
         <div class="row">
             <div class="col-md-5 col-md-offset-4">
-               
+
                 {{ form_start(form) }}
                 {{ form_widget(form) }}
+                {{ form_row(form.brochure) }}
+                {{ form_row(form.image) }}
                 {{ form_end(form) }}
-               
+
 
             </div>
         </div>
