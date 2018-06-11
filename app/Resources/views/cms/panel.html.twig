@@ -222,15 +222,20 @@
                                     <table class="table table-hover">
                                         <thead>
                                             <tr>
+                                                <th>Foto Główne</th>
                                                 <th>Nazwa Produktu</th>
                                                 <th>Opis Produktu</th>
                                                 <th>Broszura PDF</th>
+                                                <th>Galeria</th>
                                                 <th>Opcje</th>
                                             </tr>
                                         </thead>
                                         <tbody id="sortable1" class="connectedSortable">
                                             {% for prod in produkty %}
                                                 <tr class="ui-state-default">
+                                                    <td>
+                                                        <img src="{{asset('uploads/images/' ~ prod.getImage()) | imagine_filter('my_thumb_cms')}}">
+                                                    </td>
                                                     <td>{{prod.title}} </td>
                                                     <td>{{prod.descript}}</td>
                                                     <td>
@@ -238,16 +243,17 @@
                                                             <img src="{{asset('images/pdf_icon.png')}}" height="30px">
                                                         </a>
                                                     </td>
+                                                    <td>NULL</td>
                                                     <td>
                                                         <a href="{{path('show_product', {'id':prod.getId()})}}">
-                                                            <button class="btn btn-info">Pokaż Produkt</button>
+                                                            <button class="btn btn-info btn-xs">Pokaż Produkt</button>
                                                         </a>
                                                         <a href="{{path('update_product', {'id':prod.getId()})}}">
-                                                            <button class="btn btn-warning">Edytuj Produkt</button>
+                                                            <button class="btn btn-warning btn-xs">Edytuj Produkt</button>
                                                         </a>
 
                                                         <a href="{{path('delete_product', {'id':prod.getId()})}}">
-                                                            <button class="btn btn-danger">Usuń Produkt</button>
+                                                            <button class="btn btn-danger btn-xs">Usuń Produkt</button>
                                                         </a>
                                                     </td>
                                                 </tr>

@@ -5,14 +5,15 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
+
 /**
  * Product
  *
  * @ORM\Table(name="product")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\ProductRepository")
  */
-class Product
-{
+class Product {
+
     /**
      * @var int
      *
@@ -36,14 +37,12 @@ class Product
      */
     private $descript;
 
-
     /**
      * Get id
      *
      * @return int
      */
-    public function getId()
-    {
+    public function getId() {
         return $this->id;
     }
 
@@ -54,8 +53,7 @@ class Product
      *
      * @return Product
      */
-    public function setTitle($title)
-    {
+    public function setTitle($title) {
         $this->title = $title;
 
         return $this;
@@ -66,8 +64,7 @@ class Product
      *
      * @return string
      */
-    public function getTitle()
-    {
+    public function getTitle() {
         return $this->title;
     }
 
@@ -78,8 +75,7 @@ class Product
      *
      * @return Product
      */
-    public function setDescript($descript)
-    {
+    public function setDescript($descript) {
         $this->descript = $descript;
 
         return $this;
@@ -90,11 +86,10 @@ class Product
      *
      * @return string
      */
-    public function getDescript()
-    {
+    public function getDescript() {
         return $this->descript;
     }
-    
+
     /**
      * @ORM\Column(type="string")
      * @Assert\NotBlank(message="Uwaga, wrzucany plik musi być w formacie PDF!")
@@ -102,35 +97,30 @@ class Product
      */
     private $brochure;
 
-    public function getBrochure()
-    {
+    public function getBrochure() {
         return $this->brochure;
     }
 
-    public function setBrochure($brochure)
-    {
+    public function setBrochure($brochure) {
         $this->brochure = $brochure;
 
         return $this;
     }
-    
-    /**    
+
+    /**
      * @var string     
      * @Assert\Image()
      * @ORM\Column(name="image", type="string", length=255)  
      */
     private $image;
 
-    public function getImage()
-    {
+    public function getImage() {
         return $this->image;
     }
 
-    public function setImage($image)
-    {
+    public function setImage($image) {
         $this->image = $image;
 
         return $this;
     }
 }
-

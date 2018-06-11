@@ -36,7 +36,9 @@ class ProductController extends Controller {
                     'label' => 'Załącz plik (PDF)'
                 ))
                 ->add('image', FileType::class, array(
-                    'label' => 'Załącz zdjęcie'))
+                  'label' => 'Foto'  
+                ))
+               
                 ->add('Dodaj Produkt', SubmitType::class, array(
                     'attr' => array('class' => 'btn btn-info btn-block', 'style' => 'margin-top: 20px;'),
                 ))
@@ -141,7 +143,7 @@ class ProductController extends Controller {
         if ($form->isSubmitted() && $form->isValid()) {
 
             $product = $form->getData();
-            
+
             $file = $product->getBrochure();
             $fileImage = $product->getImage();
 
@@ -159,10 +161,10 @@ class ProductController extends Controller {
 
             $product->setBrochure($fileName);
             $product->setImage($fileImageName);
-            
-            
-            
-            
+
+
+
+
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($product);
             $entityManager->flush();
