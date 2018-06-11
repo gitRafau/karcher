@@ -4,7 +4,8 @@
     <div class="container">
         <div class="container -white">
             <div class="site__navigation">
-                <img src="{{asset('images/sitenav.png')}}"> <a href="">KÄRCHER</a>   <span>></span>   <a href="">Pompy</a> <span>></span>   <a href="">Pompy ciśnieniowe</a> <span>></span>   <a href="">BP 7 Home & Garden eco!logic</a>
+                 {% for prod in product %}
+                <img src="{{asset('images/sitenav.png')}}"> <a href="">KÄRCHER</a>   <span>></span>   <a href="">Pompy</a> <span>></span>   <a href="">Pompy ciśnieniowe</a> <span>></span>   <a href="">{{prod.getTitle()}}</a>
             </div>
 
             <div class="products__wrapper">
@@ -17,7 +18,7 @@
                          <div>{{prod.getDescript}}</div>
                      </a>
                  {% endfor %}#}
-                 {% for prod in product %}
+                 
                 <div class="container -white">
                     <div class="main__product">
                         <div class="left">

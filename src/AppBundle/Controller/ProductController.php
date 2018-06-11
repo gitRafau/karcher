@@ -38,7 +38,6 @@ class ProductController extends Controller {
                 ->add('image', FileType::class, array(
                   'label' => 'Foto'  
                 ))
-               
                 ->add('Dodaj Produkt', SubmitType::class, array(
                     'attr' => array('class' => 'btn btn-info btn-block', 'style' => 'margin-top: 20px;'),
                 ))
