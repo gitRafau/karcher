@@ -61,7 +61,7 @@
                             <div class="arrowShow" style="background:url('assets/images/arrowshow.png');"></div>
                         </div>
                         <div class="contentText">
-                            {{prod.getDescript()}}
+                            {{prod.getDescript() |raw }}
                         </div>
                     {% endfor %}
                     <div class="content -title">Wyposażenie standardowe</div>

@@ -237,7 +237,7 @@
                                                         <img src="{{asset('uploads/images/' ~ prod.getImage()) | imagine_filter('my_thumb_cms')}}">
                                                     </td>
                                                     <td>{{prod.title}} </td>
-                                                    <td>{{prod.descript}}</td>
+                                                    <td>{{prod.descript | raw}}</td>
                                                     <td>
                                                         <a href="{{ asset('uploads/brochures/' ~ prod.brochure) }}">
                                                             <img src="{{asset('images/pdf_icon.png')}}" height="30px">
