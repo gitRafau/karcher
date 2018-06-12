@@ -123,6 +123,6 @@ class Product {
         return $this;
     }
 
-    
+  
 
 }
