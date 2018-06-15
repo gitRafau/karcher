@@ -37,7 +37,11 @@ class ProductController extends Controller {
                     'label' => 'Załącz plik (PDF)'
                 ))
                 ->add('image', FileType::class, array(
-                    'label' => 'Foto'
+                    'label' => 'Zdjęcie'
+                ))
+                ->add('alt', TextType::class, array(
+                    'attr' => array('class' => 'form-control'),
+                    'label' => 'Opis zdjęcia'
                 ))
                
                 ->add('Dodaj Produkt', SubmitType::class, array(
@@ -134,6 +138,10 @@ class ProductController extends Controller {
                 ->add('image', FileType::class, array(
                     'label' => 'Załącz zdjęcie',
                     'data_class' => null
+                ))
+                ->add('alt', TextType::class, array(
+                    'attr' => array('class' => 'form-control'),
+                    'label' => 'Opis zdjęcia'
                 ))
                 ->add('Edytuj Produkt', SubmitType::class, array(
                     'attr' => array('class' => 'btn btn-warning btn-block', 'style' => 'margin-top: 20px;'),

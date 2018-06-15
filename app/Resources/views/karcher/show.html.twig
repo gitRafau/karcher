@@ -4,38 +4,38 @@
     <div class="container">
         <div class="container -white">
             <div class="site__navigation">
-                 {% for prod in product %}
-                <img src="{{asset('images/sitenav.png')}}"> <a href="">KÄRCHER</a>   <span>></span>   <a href="">Pompy</a> <span>></span>   <a href="">Pompy ciśnieniowe</a> <span>></span>   <a href="">{{prod.getTitle()}}</a>
-            </div>
+                {% for prod in product %}
+                    <img src="{{asset('images/sitenav.png')}}"> <a href="">KÄRCHER</a>   <span>></span>   <a href="">Pompy</a> <span>></span>   <a href="">Pompy ciśnieniowe</a> <span>></span>   <a href="">{{prod.getTitle()}}</a>
+                </div>
 
-            <div class="products__wrapper">
-                {# Szczegóły produktu
- 
-                 {% for prod in product %}
-                     <a class="product__box">
-                         <img src="{{asset('images/prod.jpg')}}">
-                         <div class="title">{{prod.getTitle}}</div>
-                         <div>{{prod.getDescript}}</div>
-                     </a>
-                 {% endfor %}#}
-                 
-                <div class="container -white">
-                    <div class="main__product">
-                        <div class="left">
-                            <div class="productShow">
-                                <a data-lightbox="image-1"  class="product__show" href="assets/images/productshow.jpg">
-                                    <img src="{{asset('uploads/images/' ~ prod.getImage())}}">
-                                    <div class="productShow__content"><span><img class="lope__products" src="assets/images/lopeproduct.png"></span><span>Powiększ zdjęcie</span></div>
-                                </a>
-                                <a data-lightbox="image-1"  class="product__show" href="assets/images/productshow.jpg">
-                                    <img src="{{asset('uploads/images/' ~ prod.getImage())}}">
-                                    <div class="productShow__content"><span><img class="lope__products" src="assets/images/lopeproduct.png"></span><span>Powiększ zdjęcie</span></div>
-                                </a>
+                <div class="products__wrapper">
+                    {# Szczegóły produktu
+     
+                     {% for prod in product %}
+                         <a class="product__box">
+                             <img src="{{asset('images/prod.jpg')}}">
+                             <div class="title">{{prod.getTitle}}</div>
+                             <div>{{prod.getDescript}}</div>
+                         </a>
+                     {% endfor %}#}
 
+                    <div class="container -white">
+                        <div class="main__product">
+                            <div class="left">
+                                <div class="productShow">
+                                    <a data-lightbox="image-1"  class="product__show" href="assets/images/productshow.jpg">
+                                        <img src="{{asset('uploads/images/' ~ prod.getImage())}}">
+                                        <div class="productShow__content"><span><img class="lope__products" src="assets/images/lopeproduct.png"></span><span>Powiększ zdjęcie</span></div>
+                                    </a>
+                                    <a data-lightbox="image-1"  class="product__show" href="assets/images/productshow.jpg">
+                                        <img src="{{asset('uploads/images/' ~ prod.getImage())}}">
+                                        <div class="productShow__content"><span><img class="lope__products" src="assets/images/lopeproduct.png"></span><span>Powiększ zdjęcie</span></div>
+                                    </a>
+
+                                </div>
                             </div>
-                        </div>
-                        <div class="right">
-                           
+                            <div class="right">
+
                                 <div class="main__productTitle">{{prod.getTitle()}}</div>
                                 <div class="main__productText -custom">Producent: Kärcher</div>
 

@@ -234,7 +234,7 @@
                                             {% for prod in produkty %}
                                                 <tr class="ui-state-default">
                                                     <td>
-                                                        <img src="{{asset('uploads/images/' ~ prod.getImage()) | imagine_filter('my_thumb_cms')}}">
+                                                        <img src="{{asset('uploads/images/' ~ prod.getImage()) | imagine_filter('my_thumb_cms')}}" alt="{{prod.getAlt()}}">
                                                     </td>
                                                     <td>{{prod.title}} </td>
                                                     <td>{{prod.descript | raw}}</td>

@@ -123,6 +123,21 @@ class Product {
         return $this;
     }
 
-  
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="alt", type="string", length=255)
+     */
+    private $alt;
+
+    public function getAlt() {
+        return $this->alt;
+    }
+
+    public function setAlt($alt) {
+        $this->alt = $alt;
+
+        return $this;
+    }
 
 }
